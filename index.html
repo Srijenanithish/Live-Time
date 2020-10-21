@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-<title>Live-clock</title>
+<title>testu</title>
 <!-- required link-->
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
-
-
 *{
 color:white;
 text-align:center;
@@ -23,25 +20,29 @@ font-family:times new roman;
  background-image:url("https://c0.wallpaperflare.com/preview/917/466/412/clock-time-time-management-time-of.jpg");
  background-repeat:no-repeat;
  background-size: cover;
- background-position: center;
- 
+ height:100%;
 }
 #txt{
-padding:90 10 10 10;
-text-align:center;
+padding: 70px 10px 10px 10px ;
+//text-align:center;
 color:red;
 font-size:70px;
 }
 #head{
-padding:10 10 50 0;
+padding:20px 10 50 0;
 color:red;
 font-size:20px;
 }
 #date{
 color:brown;
 font-size:20px;
-padding:0 0 0 30;
+padding:150 0 0 30;
 }
+#myCarousel{
+padding:20px 0 0 0;
+color:#111;
+}
+
 </style>
 <script>
 function startTime() {
@@ -64,10 +65,12 @@ function checkTime(i) {
 
 <body class="bg" onload="startTime()">
 
-<div id="head"><h1>TIME</h1></diV> 
+<div id="head"><h1>TIME</h1></diV>
+
+
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 <div class="carousel-inner" role="listbox">
-<div class="item active">
+      <div class="item active">
         <h4>"Time is a cruel thief to rob us of our former selves. We lose as much to life as we do to death."<br><span>Elizabeth Forsythe Hailey</span></h4>
       </div>
       <div class="item">
@@ -83,6 +86,7 @@ function checkTime(i) {
         <h4>“Don't waste your time with explanations: people only hear what they want to hear.”<br><span>― Paulo Coelho</span></h4>
       </div>
     </div>
+	
 	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -91,17 +95,18 @@ function checkTime(i) {
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-	
   </div>
 </div>
 <br>
 <b><p id="txt"></p></b>
 
 <b><p id="date"></p></b>
+
 <script>
 var d = new Date();
 document.getElementById("date").innerHTML = d;
 </script>
+
 
 </body>
 </html>
